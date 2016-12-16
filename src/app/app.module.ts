@@ -5,17 +5,10 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './courses/courses.component';
 import { NavComponent } from './shared/nav/nav.component';
+import { CourseComponent } from './courses/course/course.component';
 
 @NgModule({
-  declarations: [
-    // Root features
-    AppComponent,
-    NavComponent,
-    // Course feature
-    CoursesComponent,
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -23,9 +16,16 @@ import { NavComponent } from './shared/nav/nav.component';
     RouterModule.forRoot([
       {
         path: 'courses',
-        component: CoursesComponent
+        component: CourseComponent
       }
     ])
+  ],
+  declarations: [
+    // Root features
+    AppComponent,
+    NavComponent,
+    // Course feature
+    CourseComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
