@@ -1,19 +1,32 @@
-import { Course } from './../../models/course.model';
-import { CourseService } from './../../models/course.service';
+import { Course, CourseService } from './../../models';
 import { Component, OnInit } from '@angular/core';
+
+import { Subscription } from 'rxjs/subscription';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-course-list',
   templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.css']
+  styleUrls: ['./course-list.component.css'],
+  providers: [CourseService]
 })
 export class CourseListComponent implements OnInit {
-  courses: Course[] = [];
+  courses: Observable<Course[]>;
 
   constructor(private courseService: CourseService) { 
   }
 
+  getCourses() {
+    // this.courses = [];
+    // this.courses = this.courseService.getCourses();
+    this.courseService.getCourses()
+      .subscribe(courses => {
+        this.courses = this.courseService.getCourses();
+      });
+  }
+
   ngOnInit() {
+    this.getCourses();
   }
 
 }

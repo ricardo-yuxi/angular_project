@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import './core/rxjs-extensions';
 import { AppComponent } from './app.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { CourseComponent } from './courses/course/course.component';

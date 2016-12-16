@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 11,
+      "name": "Ruby",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 12,
+      "name": "JavaScript",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 13,
+      "name": "Elixir",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 14,
+      "name": "Perl",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 15,
+      "name": "Erlang",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 16,
+      "name": "Angular 2",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 17,
+      "name": "React",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 18,
+      "name": "MongoDB",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    },
+    {
+      "id": 19,
+      "name": "Redis",
+      "hours": 30,
+      "startingDate": "12/16/2016"
+    }
+  ]
+}
