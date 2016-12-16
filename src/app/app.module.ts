@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { CourseComponent } from './courses/course/course.component';
+import { CourseListComponent } from './courses/course-list/course-list.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { CourseComponent } from './courses/course/course.component';
     RouterModule.forRoot([
       {
         path: 'courses',
-        component: CourseComponent
+        component: CourseListComponent
       }
     ])
   ],
@@ -26,6 +27,7 @@ import { CourseComponent } from './courses/course/course.component';
     NavComponent,
     // Course feature
     CourseComponent,
+    CourseListComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
