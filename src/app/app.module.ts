@@ -1,3 +1,5 @@
+import { CourseListModule } from './courses/course-list/course-list.module';
+import { CourseModule } from './courses/course/course.module';
 import { CourseService } from './models/course.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,15 +9,15 @@ import { RouterModule } from '@angular/router';
 
 import './core/rxjs-extensions';
 import { AppComponent } from './app.component';
-import { NavComponent } from './shared/nav/nav.component';
-import { CourseComponent } from './courses/course/course.component';
-import { CourseListComponent } from './courses/course-list/course-list.component';
+import { AppRoutingComponent } from './app-routing/app-routing.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    CourseModule,
+    CourseListModule
     RouterModule.forRoot([
       {
         path: 'courses',
@@ -24,12 +26,8 @@ import { CourseListComponent } from './courses/course-list/course-list.component
     ])
   ],
   declarations: [
-    // Root features
     AppComponent,
-    NavComponent,
-    // Course feature
-    CourseComponent,
-    CourseListComponent,
+    AppRoutingComponent,
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
