@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Course, CourseService } from './../../models';
+
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-course',
@@ -6,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course.component.css']
 })
 export class CourseComponent implements OnInit {
+  @Input()
+  course: Course;
 
-  constructor() { }
-
+  constructor(
+    private courseService: CourseService) { }
+  
   ngOnInit() {
   }
 

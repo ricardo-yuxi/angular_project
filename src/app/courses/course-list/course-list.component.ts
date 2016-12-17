@@ -8,7 +8,6 @@ import { Observable } from 'rxjs/Observable';
   selector: 'app-course-list',
   templateUrl: './course-list.component.html',
   styleUrls: ['./course-list.component.css'],
-  providers: [CourseService]
 })
 export class CourseListComponent implements OnInit {
   courses: Observable<Course[]>;
@@ -17,8 +16,6 @@ export class CourseListComponent implements OnInit {
   }
 
   getCourses() {
-    // this.courses = [];
-    // this.courses = this.courseService.getCourses();
     this.courseService.getCourses()
       .subscribe(courses => {
         this.courses = this.courseService.getCourses();
