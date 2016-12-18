@@ -1,8 +1,6 @@
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
-import { CourseListModule } from './courses/course-list/course-list.module';
-import { CourseModule } from './courses/course/course.module';
 import { CourseService } from './models/course.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,8 +17,6 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     HomeModule,
-    CourseModule,
-    CourseListModule,
     AppRoutingModule,
     CoreModule
   ],
