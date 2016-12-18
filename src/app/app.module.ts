@@ -1,3 +1,4 @@
+import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CourseListModule } from './courses/course-list/course-list.module';
@@ -20,10 +21,11 @@ import { AppComponent } from './app.component';
     HomeModule,
     CourseModule,
     CourseListModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
