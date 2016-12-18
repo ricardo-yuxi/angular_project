@@ -1,3 +1,5 @@
+import { HomeModule } from './home/home.module';
+import { AppRoutingModule } from './app-routing.module';
 import { CourseListModule } from './courses/course-list/course-list.module';
 import { CourseModule } from './courses/course/course.module';
 import { CourseService } from './models/course.service';
@@ -9,25 +11,19 @@ import { RouterModule } from '@angular/router';
 
 import './core/rxjs-extensions';
 import { AppComponent } from './app.component';
-import { AppRoutingComponent } from './app-routing/app-routing.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HomeModule,
     CourseModule,
-    CourseListModule
-    RouterModule.forRoot([
-      {
-        path: 'courses',
-        component: CourseListComponent
-      }
-    ])
+    CourseListModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    AppRoutingComponent,
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
